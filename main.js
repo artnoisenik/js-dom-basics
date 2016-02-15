@@ -51,9 +51,25 @@ console.log(allListItems);
 
 document.getElementById('main').style.backgroundColor = "goldenrod";
 
-oddElements[0].style.color = 'pink';
-oddElements.style.backgroundColor = 'black';
-// Seems to only work when I target index number.
+// oddElements[0].style.color = 'pink';
+// oddElements.style.backgroundColor = 'black';
+// // Seems to only work when I target index number.
+//
+// evenElements.style.color = 'black';
+// evenElements.style.backgroundColor = 'pink';
 
-evenElements.style.color = 'black';
-evenElements.style.backgroundColor = 'pink';
+var li = document.createElement('li');
+console.log(li);
+
+var newElement = li.innerText = "another list item";
+console.log(newElement);
+console.log(li);
+
+getSingleElement.appendChild(li);
+console.log(allListItems);
+
+var anotherListElement = document.createElement('li');
+anotherListElement.innerText = "prepend";
+console.log(anotherListElement);
+getSingleElement.insertBefore(anotherListElement, getSingleElement.firstChild);
+console.log(allListItems);
